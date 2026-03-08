@@ -1,10 +1,12 @@
-# 🎬 Netflix Clone Project
+# 🎬 Flix - Movie Streaming App Clone
 
-This project is a responsive web application inspired by the look and feel of Netflix. 
+![Náhled projektu Flix](pictures/project-preview.png)
+
+This project is a responsive web application inspired by the look and feel of modern streaming platforms. 
 It was created as a study project focusing on modern HTML, CSS, and JavaScript/TypeScript.
 
 ## 🚀 Live Demo
-[👉 Click here to view the live demo of the application](https://jirigalacz.github.io/Engeto-Projekt-Netflix/)
+[👉 Click here to view the live demo of the application](https://jirigalacz.github.io/Projekt-Flix/)
 
 ## ✨ Main Features
 * **Responsive Design**: The website looks great on mobile devices, tablets, and large desktop monitors (utilizing CSS Flexbox and Grid).
