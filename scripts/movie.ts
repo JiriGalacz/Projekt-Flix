@@ -7,7 +7,11 @@ export interface Show {
   image: {
     medium: string;
     original: string;
-  } | null; // Některé filmy nemusí mít obrázek, proto "null"
+  } | null;
+  rating?: {
+    average: number | null; // Přidáno pro zobrazení hodnocení
+  };
+  summary?: string; // Přidáno pro popis filmu
 }
 
 /**

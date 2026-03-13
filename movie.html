@@ -26,22 +26,22 @@
       <h2>Vyhledejte si svůj oblíbený film</h2>
 
       <!-- --- Sekce pro filtrování filmů --- -->
-      <div class="filter-section">
-        <label for="movie-filter">Vyberte téma:</label>
-        <select id="movie-filter">
-          <option value="" disabled selected>Vyberte...</option>
-          <option value="girl">Dívka (Girl)</option>
-          <option value="boy">Chlapec (Boy)</option>
-          <option value="love">Láska (Love)</option>
-          <option value="batman">Batman</option>
-          <option value="superman">Superman</option>
-          <option value="zombie">Zombie</option>
-          <option value="star">Vesmír (Star)</option>
-          <option value="dog">Pes (Dog)</option>
-          <option value="war">Válka (War)</option>
-          <option value="magic">Magie (Magic)</option>
-        </select>
-      </div>
+  <div class="filter-section">
+  <label for="movie-search">Hledat film:</label>
+  <input 
+    type="text" 
+    id="movie-search" 
+    placeholder="Zadejte název (např. Batman)..." 
+    style="padding: 10px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--surface-medium); color: white; width: 100%; max-width: 300px;"
+  >
+  
+  <label for="movie-filter">Nebo vyberte téma:</label>
+  <select id="movie-filter">
+    <option value="" disabled selected>Vyberte...</option>
+    <option value="girl">Dívka (Girl)</option>
+    <option value="batman">Batman</option>
+    </select>
+</div>
 
       <!-- --- Galerie výsledků (karty filmů) --- -->
       <section id="movie-gallery" class="gallery-grid"></section>

@@ -42,6 +42,46 @@ main h2 {
   cursor: pointer;
 }
 
+
+/* --- Stylování textového vyhledávání --- */
+.search-input {
+  padding: 12px 20px;
+  background-color: var(--surface-medium);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px; /* Sjednocení s šířkou selectu */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--netflix-red); /* Sjednocení s fokusem selectu */
+  box-shadow: 0 0 0 2px rgba(var(--netflix-red-rgb), 0.3);
+}
+
+/* --- Kontejner pro hodnocení na kartě --- */
+.movie-rating {
+  padding: 0 10px 15px; /* Odsazení od spodního okraje karty */
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-top: -5px; /* Přitažení blíže k názvu filmu */
+}
+
+.rating-star {
+  color: var(--netflix-red); /* Použití brandové barvy pro hvězdičku */
+  margin-right: 5px;
+}
+
+.no-rating {
+  color: var(--text-muted); /* Barva pro chybějící hodnocení */
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
 /* --- 3. GALERIE A FILMOVÉ KARTY (Gallery Grid) --- */
 /* Galerie filmu - samo-zalamovací bez Media Queries */
 .gallery-grid {
