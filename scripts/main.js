@@ -8,7 +8,7 @@ import { initScrollUpButton } from "./utils.js";
  * Spouští jednotlivé moduly pouze na stránkách, kde jsou potřeba.
  * ============================================================================
  */
-// --- 1. Modul Galerie (filmy.html) ---
+// --- 1. Modul Galerie (movie.html) ---
 if (document.getElementById("movie-gallery")) {
     initGallery();
 }

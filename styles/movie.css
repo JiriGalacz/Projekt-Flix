@@ -29,7 +29,7 @@ main h2 {
 /* Styl pro nové textové vyhledávání */
 .search-input {
   padding: 12px 20px;
-  background-color: var(--surface-medium);
+  background-color: var(--bg-black);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
   border-radius: 4px;
@@ -58,6 +58,12 @@ main h2 {
 .rating-star {
   color: #ffc107; /* Zlatá barva pro hvězdičku */
   margin-right: 5px;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
 }
 
 /* Responzivita pro tablety a PC */

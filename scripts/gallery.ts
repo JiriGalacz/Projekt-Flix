@@ -45,7 +45,24 @@ export function initGallery() {
       performSearch(input.value);
     }, 500);
   });
+  
+  movieFilter?.addEventListener("change", (event) => {
+  if (movieSearch) movieSearch.value = ""; // vymazání textu
+  const select = event.target as HTMLSelectElement;
+  performSearch(select.value);
+});
+
+movieSearch?.addEventListener("input", (event) => {
+  if (movieFilter) movieFilter.value = ""; // resetování roletky
+  // ... tvůj stávající debounce kód
+});
+
+// --- ÚVODNÍ NAČTENÍ DAT ---
+  // Voláme úplně na konci funkce initGallery, jakmile jsou všechny prvky připravené.
+  performSearch("Marvel"); 
 }
+
+
 
 /**
  * ============================================================================

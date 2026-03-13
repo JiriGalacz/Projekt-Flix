@@ -8,6 +8,10 @@ export interface Show {
         medium: string;
         original: string;
     } | null;
+    rating?: {
+        average: number | null;
+    };
+    summary?: string;
 }
 /**
  * Struktura odpovědi z TVMaze API, kde každý objekt má 'score' a 'show'.
