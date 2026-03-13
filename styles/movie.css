@@ -15,81 +15,58 @@ main h2 {
 }
 
 
-/* --- 2. FILTR A ROLETKA (Filter Section) --- */
-/* Sekce s roletkou */
+/* --- 2. FILTR A VYHLEDÁVÁNÍ (Filter & Search) --- */
+/* Upravíme kontejner, aby prvky na desktopu mohly být vedle sebe */
 .filter-section {
   margin: 30px auto 40px auto;
   display: flex;
-  flex-direction: column; /* Na mobilu štítek a roletka pod sebou */
-  gap: 15px;
+  flex-direction: column; 
+  gap: 20px;
   align-items: center;
-  max-width: 600px;
+  max-width: 800px;
 }
 
-.filter-section label {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-}
-
-.filter-section select {
-  padding: 10px;
-  background-color: var(--surface-medium);
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-
-/* --- Stylování textového vyhledávání --- */
+/* Styl pro nové textové vyhledávání */
 .search-input {
   padding: 12px 20px;
   background-color: var(--surface-medium);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   width: 100%;
-  max-width: 300px; /* Sjednocení s šířkou selectu */
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
   outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .search-input:focus {
-  border-color: var(--netflix-red); /* Sjednocení s fokusem selectu */
+  border-color: var(--netflix-red);
   box-shadow: 0 0 0 2px rgba(var(--netflix-red-rgb), 0.3);
 }
 
-/* --- Kontejner pro hodnocení na kartě --- */
+/* --- 3. DODATEČNÉ STYLY PRO KARTY --- */
+/* Kontejner pro hodnocení v kartě filmu */
 .movie-rating {
-  padding: 0 10px 15px; /* Odsazení od spodního okraje karty */
+  padding: 0 10px 15px;
   text-align: center;
-  font-size: 0.95rem;
   font-weight: bold;
-  margin-top: -5px; /* Přitažení blíže k názvu filmu */
+  font-size: 0.95rem;
+  margin-top: -5px; /* Přitáhne hodnocení blíže k nadpisu */
 }
 
 .rating-star {
-  color: var(--netflix-red); /* Použití brandové barvy pro hvězdičku */
+  color: #ffc107; /* Zlatá barva pro hvězdičku */
   margin-right: 5px;
 }
 
-.no-rating {
-  color: var(--text-muted); /* Barva pro chybějící hodnocení */
-  font-size: 0.8rem;
-  font-weight: normal;
-}
-
-/* --- 3. GALERIE A FILMOVÉ KARTY (Gallery Grid) --- */
-/* Galerie filmu - samo-zalamovací bez Media Queries */
-.gallery-grid {
-  display: grid;
-  /* Na mobilu má karta min 140px, zbytek místa se rovnoměrně rozdělí (1fr) */
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
+/* Responzivita pro tablety a PC */
+@media (min-width: 768px) {
+  .filter-section {
+    flex-direction: row; /* Vyhledávání a roletka vedle sebe */
+    justify-content: center;
+    gap: 30px;
+  }
 }
 
 /* Styly pro dynamicky vytvořené karty filmů z TypeScriptu */
